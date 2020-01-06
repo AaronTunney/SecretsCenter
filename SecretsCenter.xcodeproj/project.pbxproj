@@ -157,6 +157,7 @@
 				53C75E7D23B14C0700E6EBF7 /* Frameworks */,
 				53C75E7E23B14C0700E6EBF7 /* Resources */,
 				A0E1EB98EEF9334715281B07 /* [CP] Embed Pods Frameworks */,
+				5322898B23C37044008A442D /* Inject Secrets */,
 			);
 			buildRules = (
 			);
@@ -246,6 +247,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5322898B23C37044008A442D /* Inject Secrets */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Inject Secrets";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=~/.rbenv/shims:$PATH\nexport LANG=en_US.UTF-8\ncd ${SRCROOT}\nSECRET=$(bundle exec pod keys get JSONSecret SecretsCenter)\necho $SECRET\nmv ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/Secrets.json temp.json\njq -r \".secret |= \\\"${SECRET}\\\"\" temp.json > ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/Secrets.json\nrm temp.json\n";
+		};
 		8AF84555E03D70A1C397EF96 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
