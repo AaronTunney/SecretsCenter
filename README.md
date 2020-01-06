@@ -23,7 +23,7 @@ This project consists of four parts:
 * A functioning Ruby environment
 * Cocoapods installed
 * XCode’s command line tools installed
-* Bundler installed ($ gem install bundler)
+* Bundler installed (``` $gem install bundler ```)
 
 **Steps:**
 
