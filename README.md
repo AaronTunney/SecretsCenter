@@ -41,6 +41,7 @@ $ bundle install
 ```
 
 This will install the Cocoapods-Keys plugin.
+If you have any issue, try this: https://stackoverflow.com/questions/46377667/docker-for-mac-mkmf-rb-cant-find-header-files-for-ruby
 
 #### 3. Install Pods
 
