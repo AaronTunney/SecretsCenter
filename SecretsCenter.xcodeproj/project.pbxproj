@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5322898A23C357E6008A442D /* Secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = 5322898923C354E2008A442D /* Secrets.json */; };
 		53C75E8423B14C0700E6EBF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C75E8323B14C0700E6EBF7 /* AppDelegate.swift */; };
 		53C75E8623B14C0700E6EBF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C75E8523B14C0700E6EBF7 /* SceneDelegate.swift */; };
 		53C75E8823B14C0700E6EBF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C75E8723B14C0700E6EBF7 /* ContentView.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		17003C395BFBF75BB8B4E17D /* Pods-SecretsCenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretsCenter.release.xcconfig"; path = "Target Support Files/Pods-SecretsCenter/Pods-SecretsCenter.release.xcconfig"; sourceTree = "<group>"; };
 		48B910C0595C35738F47D7F8 /* Pods-SecretsCenterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretsCenterTests.debug.xcconfig"; path = "Target Support Files/Pods-SecretsCenterTests/Pods-SecretsCenterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5322898923C354E2008A442D /* Secrets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Secrets.json; sourceTree = "<group>"; };
 		53C75E8023B14C0700E6EBF7 /* SecretsCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretsCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C75E8323B14C0700E6EBF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53C75E8523B14C0700E6EBF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				53C75E8523B14C0700E6EBF7 /* SceneDelegate.swift */,
 				53C75E8723B14C0700E6EBF7 /* ContentView.swift */,
 				53C75EA523B1526B00E6EBF7 /* SecretsManager.swift */,
+				5322898923C354E2008A442D /* Secrets.json */,
 				53C75E8923B14C0800E6EBF7 /* Assets.xcassets */,
 				53C75E8E23B14C0800E6EBF7 /* LaunchScreen.storyboard */,
 				53C75E9123B14C0800E6EBF7 /* Info.plist */,
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53C75E9023B14C0800E6EBF7 /* LaunchScreen.storyboard in Resources */,
+				5322898A23C357E6008A442D /* Secrets.json in Resources */,
 				53C75E8D23B14C0800E6EBF7 /* Preview Assets.xcassets in Resources */,
 				53C75E8A23B14C0800E6EBF7 /* Assets.xcassets in Resources */,
 			);

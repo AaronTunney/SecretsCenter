@@ -10,7 +10,8 @@ target 'SecretsCenter' do
   # Plugins for SecretsCenter
   plugin 'cocoapods-keys', {
   :keys => [
-    "TestSecret"
+    "TestSecret",
+    "JSONSecret"
   ]}
 
   target 'SecretsCenterTests' do
