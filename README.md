@@ -6,11 +6,11 @@ This sample project demonstrates how to keep secrets secret when using GitHub an
 
 This project consists of four parts:
 
-**SecretsCenter**: A single-view app that displays the secret.
+**SecretsCenter**: A single-view app that displays two secrets: one generated through code, one read from a JSON file.
 
-**SecretsCenter Tests**: a single test that validated whether the found secret matches the expected value.
+**SecretsCenter Tests**: Two tests to validate whether the found secrets match the expected values.
 
-**App Center scripts**: Two scripts that are picked up by Microsoft Visual Studio App Center and are run as part of the build process.
+**App Center scripts**: A script that is automatically detected by Microsoft Visual Studio App Center and is run as part of the build process.
 
 **Cocoapods-Keys configuration**: Cocoapods-Keys is the glue that allows the GitHub repository to remain secret-free while allowing developers and the CI system to specify the required secrets.
 
@@ -21,6 +21,7 @@ This project consists of four parts:
 **Prerequisites:**
 
 * A functioning Ruby environment
+* [jq](https://stedolan.github.io/jq/) installed
 * Cocoapods installed
 * XCode’s command line tools installed
 
@@ -63,7 +64,7 @@ See: https://docs.microsoft.com/en-us/appcenter/sdk/getting-started/ios
 
 See: https://docs.microsoft.com/en-us/appcenter/build/custom/variables/
 
-The environment variable used for this project is named `APITestSecret`. 
+The environment variables used for this project are named `APITestSecret` and `JSONSecret`. 
 
 #### 4. Save and build
 
