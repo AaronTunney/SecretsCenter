@@ -11,7 +11,7 @@ bundle install
 echo "Setting secrets"
 cd $APPCENTER_SOURCE_DIRECTORY
 bundle exec pod keys set "TestSecret" "$APITestSecret" SecretsCenter
-bundle exec pod keys set "JSONSectet" "$JSONSecret" SecretsCenter
+bundle exec pod keys set "JSONSecret" "$JSONSecret" SecretsCenter
 
 echo "Installing pods"
 bundle exec pod install
