@@ -10,7 +10,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text(SecretsManager().testSecret ?? "Missing variable 🙈")
+        VStack(alignment: .center, spacing: 16.0) {
+            Text(SecretsManager().testSecret ?? "Missing variable 🙈")
+            Text(SecretsManager().jsonSecret ?? "Missing variable 🙈")
+        }
     }
 }
 

@@ -17,4 +17,12 @@ class SecretsCenterTests: XCTestCase {
 
         XCTAssertEqual(secretsManager.testSecret, "Hello World!")
     }
+
+    func testJSONSecret() {
+        let secretsManager = SecretsManager()
+
+        print("VARIABLE: \(String(describing: secretsManager.jsonSecret))")
+
+        XCTAssertEqual(secretsManager.jsonSecret, "Goodbye World!")
+    }
 }

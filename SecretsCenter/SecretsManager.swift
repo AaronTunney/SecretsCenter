@@ -14,4 +14,20 @@ class SecretsManager {
         let keys = SecretsCenterKeys()
         return keys.testSecret
     }
+
+    var jsonSecret: String? {
+        if let path = Bundle.main.path(forResource: "Secrets", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                if let jsonResult = jsonResult as? Dictionary<String, String>, let secret = jsonResult["secret"] {
+                    return secret
+                }
+            } catch {
+                print("Error reading JSON file: \(error)")
+            }
+        }
+
+        return nil
+    }
 }
