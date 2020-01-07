@@ -263,7 +263,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=~/.rbenv/shims:$PATH\nexport LANG=en_US.UTF-8\ncd ${SRCROOT}\nSECRET=$(bundle exec pod keys get JSONSecret SecretsCenter)\necho $SECRET\nmv ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/Secrets.json temp.json\njq -r \".secret |= \\\"${SECRET}\\\"\" temp.json > ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/Secrets.json\nrm temp.json\n";
+			shellScript = "${SRCROOT}/inject-json-secret.sh -f Secrets.json -k JSONSecret\n";
 		};
 		8AF84555E03D70A1C397EF96 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
