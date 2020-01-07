@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
-while getopts f:k: option
+while getopts f:i:k: option
 do
 case "${option}"
 in
 f) FILENAME=${OPTARG};;
+i) IDENTITY=${OPTARG};;
 k) KEY=${OPTARG};;
 esac
 done
@@ -20,5 +21,5 @@ echo $SECRET
 
 # Inject secret
 mv ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/$FILENAME temp.json
-jq -r ".secret |= \"${SECRET}\"" temp.json > ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/$FILENAME
+jq -r "$IDENTITY |= \"${SECRET}\"" temp.json > ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/$FILENAME
 rm temp.json

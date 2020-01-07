@@ -263,7 +263,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${SRCROOT}/inject-json-secret.sh -f Secrets.json -k JSONSecret\n";
+			shellScript = "${SRCROOT}/inject-json-secret.sh -f Secrets.json -i .secret -k JSONSecret\n";
 		};
 		8AF84555E03D70A1C397EF96 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
